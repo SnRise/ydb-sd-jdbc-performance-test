@@ -35,7 +35,7 @@ public class PersonController {
 
     @PostMapping
     public Person save(@RequestBody Person person) {
-        return personRepository.save(person);
+        return personRepository.insert(person);
     }
 
     @DeleteMapping("/{id}")

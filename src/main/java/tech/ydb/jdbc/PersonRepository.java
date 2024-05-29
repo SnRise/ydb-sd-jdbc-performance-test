@@ -27,23 +27,13 @@ public class PersonRepository {
                 statement.setInt(1, from);
                 statement.setInt(2, to);
                 try (ResultSet rs = statement.executeQuery()) {
-                    List<Person> persons = new ArrayList<>();
-                    while (rs.next()) {
-                        int id = rs.getInt("id");
-                        String firstName = rs.getString("first_name");
-                        String lastName = rs.getString("last_name");
-
-                        persons.add(new Person(id, firstName, lastName));
-                    }
-
-                    return persons;
+                    return extractResult(rs);
                 }
             }
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         }
     }
-}
 
     public List<Person> findAllWithLimit() {
         try (Connection connection = DriverManager.getConnection(jdbcUrl)) {
@@ -60,18 +50,18 @@ public class PersonRepository {
         }
     }
 
-//    private List<Person> extractResult(ResultSet rs) throws SQLException {
-//        List<Person> persons = new ArrayList<>();
-//        while (rs.next()) {
-//            int id = rs.getInt("id");
-//            String firstName = rs.getString("first_name");
-//            String lastName = rs.getString("last_name");
-//
-//            persons.add(new Person(id, firstName, lastName));
-//        }
-//
-//        return persons;
-//    }
+    private List<Person> extractResult(ResultSet rs) throws SQLException {
+        List<Person> persons = new ArrayList<>();
+        while (rs.next()) {
+            int id = rs.getInt("id");
+            String firstName = rs.getString("first_name");
+            String lastName = rs.getString("last_name");
+
+            persons.add(new Person(id, firstName, lastName));
+        }
+
+        return persons;
+    }
 
     public Person save(Person person) {
         try (Connection connection = DriverManager.getConnection(jdbcUrl)) {
