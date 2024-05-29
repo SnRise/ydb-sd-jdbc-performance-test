@@ -1,0 +1,4 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Sent KB/sec
+Find All,8323,153,156,177,185,301,6,464,0.000%,504.66893,2736.11,64.07
+Between,1677,164,167,187,195,317,19,463,0.000%,101.85241,2998.76,15.51
+TOTAL,10000,154,158,180,188,305,6,464,0.000%,606.35460,5729.96,79.56
