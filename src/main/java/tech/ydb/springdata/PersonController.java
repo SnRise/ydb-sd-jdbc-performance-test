@@ -24,7 +24,7 @@ public class PersonController {
     }
 
     @GetMapping("/between")
-    private List<Person> getPersonsByIdBetween(@RequestParam int from, @RequestParam int to) {
+    public List<Person> getPersonsByIdBetween(@RequestParam int from, @RequestParam int to) {
         return personRepository.findByIdBetween(from, to);
     }
 

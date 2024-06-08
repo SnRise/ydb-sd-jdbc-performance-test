@@ -23,7 +23,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 @SpringBootTest
 @State(Scope.Benchmark)
-@BenchmarkMode(Mode.All)
+@BenchmarkMode({Mode.Throughput, Mode.SampleTime})
 @OutputTimeUnit(TimeUnit.SECONDS)
 public class BenchmarkTests {
 
@@ -47,7 +47,7 @@ public class BenchmarkTests {
                 .warmupIterations(1)
                 .measurementIterations(1)
                 .forks(0)
-                .threads(4)
+                .threads(16)
                 .shouldDoGC(true)
                 .shouldFailOnError(true)
                 .jvmArgs("-server")
@@ -85,7 +85,8 @@ public class BenchmarkTests {
 
     @State(value = Scope.Benchmark)
     public static class FromToIds {
-        @Param({ "25-75", "100-200", "1000-1250", "2000-2500", "5000-6000" })
+        @Param({ "25-75", "100-200", "250-400", "500-700", "850-1100", "1200-1500", "1600-1950", "2100-2500",
+                "2650-3100", "3300-3800", "4000-4600", "4800-5500", "5700-6500", "6800-7700", "8000-9000" })
         String fromToIds;
 
         String[] splitFromToId() {

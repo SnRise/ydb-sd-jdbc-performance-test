@@ -1,5 +1,6 @@
 package tech.ydb.springdata;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
 /**
@@ -7,6 +8,7 @@ import org.springframework.data.relational.core.mapping.Table;
  */
 @Table("persons")
 public class Person {
+    @Id
     private int id;
     private String firstName;
     private String lastName;

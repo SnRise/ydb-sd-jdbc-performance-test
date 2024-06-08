@@ -1,0 +1,31 @@
+Test,Response time,Users
+JDBC,6,4
+JDBC,12,10
+JDBC,16,15
+JDBC,22,20
+JDBC,28,25
+JDBC,37,30
+JDBC,42,35
+JDBC,48,40
+JDBC,56,45
+JDBC,61,50
+JDBC,83,60
+JDBC,82,70
+JDBC,102,80
+JDBC,107,90
+JDBC,117,100
+Spring Data JDBC,7,4
+Spring Data JDBC,14,10
+Spring Data JDBC,18,15
+Spring Data JDBC,22,20
+Spring Data JDBC,28,25
+Spring Data JDBC,42,30
+Spring Data JDBC,40,35
+Spring Data JDBC,47,40
+Spring Data JDBC,54,45
+Spring Data JDBC,64,50
+Spring Data JDBC,76,60
+Spring Data JDBC,88,70
+Spring Data JDBC,105,80
+Spring Data JDBC,116,90
+Spring Data JDBC,127,100

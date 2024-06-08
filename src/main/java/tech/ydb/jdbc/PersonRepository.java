@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository("personRepositoryJdbc")
 public class PersonRepository {
-    @Value("${jdbcUrl}")
+    @Value("${spring.datasource.url}")
     String jdbcUrl;
 
     public List<Person> findByIdBetween(int from, int to) {

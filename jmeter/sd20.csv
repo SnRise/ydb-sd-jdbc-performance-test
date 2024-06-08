@@ -1,0 +1,4 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+Find All,1700,21,5,105,13.09,0.000%,541.57375,3465.07,66.64,6551.7
+Between,300,30,13,124,14.81,0.000%,97.24473,3341.31,14.43,35184.5
+TOTAL,2000,22,5,124,13.73,0.000%,631.51247,6689.24,80.11,10846.6
